@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ShogunNameApp</string>
+    <string name="title_edo">江戸幕府の将軍</string>
+    <string name="first_shogun">初代将軍</string>
+    <string name="second_shogun">二代将軍</string>
+    <string name="third_shogun">三代将軍</string>
 </resources>
