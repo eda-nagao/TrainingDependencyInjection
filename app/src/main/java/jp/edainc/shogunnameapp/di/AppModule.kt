@@ -11,14 +11,24 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import javax.inject.Singleton
 
+/**
+ * アプリ内で使用するインスタンスを注入するためのモジュール
+ */
+
 @Module
 object AppModule {
 
+    /**
+     * リポジトリのインスタンスを供給するメソッド
+     */
     @Singleton @JvmStatic @Provides
     fun provideShogunRepository(): ShogunRepository {
         return ShogunRepositoryImpl(createApi())
     }
 
+    /**
+     * APIの実装を供給するメソッド
+     */
     private fun createApi(): ShogunApi {
         val client = OkHttpClient.Builder().apply {
             // デバッグ時にログを表示する
